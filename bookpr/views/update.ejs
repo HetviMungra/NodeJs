@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #000000;
+            padding: 100px;
+            background: url("https://marketplace.canva.com/EAE5d-CHWl8/1/0/1600w/canva-school-desktop-wallpaper-CYJMyiOzkTw.jpg");
+            /* background: url("https://www.shutterstock.com/image-vector/seamless-pattern-outline-decorative-books-260nw-200453630.jpg"); */
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 5px );   
+            background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        form input, form button {
+            padding: 15px;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            font-weight: 800;
+            border-radius: 5px;
+            padding: 15px 50px;
+            background-color: #680acd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #4cae4c;
+        }
+
+</style>
+<body>
+    <h1 style="font-weight: bolder;">Edit Book</h1>
+    <form action="/updateData" method="post">
+        <input type="text" hidden value="<%=singleBook.id%>" name="id"  >
+        <input type="url" list="browsers" value="<%=singleBook.image%>" name="image" placeholder="Enter Image URL" required> <br>
+        <input type="text" value="<%=singleBook.book%>" name="book" placeholder="Enter Book Name" required> <br>
+        <input type="text" value="<%=singleBook.author%>" name="author" placeholder="Enter Author" required> <br>
+        <input type="number" value="<%=singleBook.price%>" name="price" placeholder="Enter Price" required> <br>
+        <input type="date" value="<%=singleBook.date%>" name="date" placeholder="Enter Release Date" required> <br>
+        <button type="submit">Update Book</button>
+    </form>
+    <datalist id="browsers">
+        <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/325/9781529399325.jpg">
+          <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/614/9781399728614.jpg"></option>  
+          <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/614/9781399728614.jpg"></option>  
+          <option value="https://www.bookswagon.com/productimages/images200/930/9789390166930.jpg"></option>  
+          <option value="https://www.bookswagon.com/productimages/images200/930/9789390166930.jpg"></option>  
+          <option value="https://www.bookswagon.com/productimages/images200/930/9789390166930.jpg"></option>  
+          <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/306/9789356400306.jpg"></option>  
+        
+        </datalist>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            background: url("https://marketplace.canva.com/EAE5d-CHWl8/1/0/1600w/canva-school-desktop-wallpaper-CYJMyiOzkTw.jpg");
+            /* background: url("https://www.shutterstock.com/image-vector/seamless-pattern-outline-decorative-books-260nw-200453630.jpg"); */
+            backdrop-filter: blur( 2px );
+            -webkit-backdrop-filter: blur( 2px );   
+            background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+                 
+        }
+      
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        form input, form button {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #0342ff5c;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #2011ef;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #1799bd;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1px;
+
+        }
+        .navbar a:hover {
+        text-decoration: underline;
+        color: aqua;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px;
+        }
+        .Book-card {
+         
+
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 20vw;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Book-card img {
+            width: 80%;
+           
+            height: 40vh;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .Book-card span {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .Book-card button {
+            padding: 8px 50px;
+            background-color: #22d316;
+            color: white !important ;
+            border: none;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .Book-card button a{
+            color: white;
+            text-decoration: none;
+        }
+        .Book-card button:last-child {
+            background-color: #ff160e;
+            color: white;
+        }
+        .Book-card button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Bookstore</h1>
+        <div>
+            <a href="/">Home</a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Add Book</button>
+        
+            </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Add your new book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+              
+            <form action="/addData" method="post">
+                <input type="url" list="browsers" name="image" placeholder="Enter Image URL" required><br>
+                <input type="text" name="book" placeholder="Enter Book Name" required><br>
+                <input type="text" name="author" placeholder="Enter Author" required><br>
+                <input type="number" name="price" placeholder="Enter Price" required><br><br>
+                <input type="date" name="date" required><br>
+                <button type="submit">Add Book</button>
+            </form>
+            <datalist id="browsers">
+                <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/325/9781529399325.jpg">
+                  <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/614/9781399728614.jpg"></option>  
+                  <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/614/9781399728614.jpg"></option>  
+                  <option value="https://www.bookswagon.com/productimages/images200/930/9789390166930.jpg"></option>  
+                  <option value="https://www.bookswagon.com/productimages/images200/930/9789390166930.jpg"></option>  
+                  <option value="https://www.bookswagon.com/productimages/images200/930/9789390166930.jpg"></option>  
+                  <option value="https://d2g9wbak88g7ch.cloudfront.net/productimages/images200/306/9789356400306.jpg"></option>  
+                
+                </datalist>
+
+        
+    </div>
+
+    <div class="book-container">
+        <% Book.map((e) => { %>
+            <div class="Book-card">
+                <center><img src="<%= e.image %>" alt="Book Image"></center>
+                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding: 3px; color: black;
+                text-transform: capitalize; font-size: 35px;"><%= e.book %></h1>
+                <h5 style="text-align: end; margin-top: -10px; font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif; padding-right: 20px;
+                font-weight: 600; color: rgb(71, 72, 72); font-style: italic;">by <%= e.author %></h5>
+                <h2 style=" font-family: Arial, Helvetica, sans-serif; padding-left: 20px;
+                font-size: 23px; color: red;font-weight: 600;" >$<%= e.price %></h2>
+                <h3 style=" font-family: Arial, Helvetica, sans-serif; padding-left: 20px;
+                font-size: 18px; font-weight: 600; color: #2011ef;">Public : <%= e.date %></h3>
+                <span>
+                    <button><a href="/editData?id=<%=e.id%>">Edit</a></button>
+                    <button><a href="/deleteData?id=<%=e.id%>">Delete</a></button>
+                </span>
+            </div>
+        <% }) %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
