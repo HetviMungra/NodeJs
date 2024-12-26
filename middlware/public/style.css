@@ -1,0 +1,123 @@
+#nav_width{
+    /* border: 1px solid; */
+    width: 81%;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+#navbarSupportedContent{
+    /* border: 2px solid red; */
+    width: 10%;
+}
+#margin_nav{
+    /* border: 2px solid; */
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-weight: 400;
+}
+#margin_nav .nav-item a{
+    color: white;
+}
+.nav-link {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.carousel-indicators{
+    height: 10%;
+}
+/* .container{
+    border: 2px solid red;
+
+}
+.row{
+    border: 2px solid green;
+
+}
+.col{
+    border: 2px solid rebeccapurple;
+} */
+/* .about-img{
+    
+border: 1px solid pink;
+} */
+.about-text{
+    font-family:Montserrat ;
+}
+.about-text h5{
+    font-family: Ubuntu;
+}
+.menu-1{
+    color: white;
+    height: 700px;
+    width: 100%;
+    border: 2px solid;
+    background-image: url(/imag/background-img-1.jpg);
+    background-position: 20%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.menu-1 pre{
+    font-family:Montserrat ;
+  
+}
+.menu-1 pre span{
+    font-family:  Cormorant Upright ;
+    font-size: 21px;
+}
+.menu-1 p{
+    font-family:  Cormorant Upright ;
+   
+}
+#btn-1{
+    height: 50px;
+     width: 150px;
+      border: 2px double goldenrod;
+       background-color: goldenrod; 
+       color: white;
+}
+#btn-1:hover {
+    border: 5px double goldenrod;
+background-color: transparent;
+color: goldenrod;  
+}
+.menu-2{
+    color: white;
+    height: 700px;
+    width: 100%;
+    border: 2px solid;
+    background-image: url(/imag/background-img-2.jpg);
+    background-position: 20%;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.menu-2 pre{
+    font-family:Montserrat ;
+}
+.menu-2 pre span{
+    font-family:  Cormorant Upright ;
+    font-size: 21px;
+}
+.menu-2 p{
+    font-family:  Cormorant Upright ;
+   
+}
+.true img{
+    width: 620px;
+}
+.make{
+    color: white;
+    height: 500px;
+    width: 100%;
+    border: 2px solid;
+    background-image: url(/imag/h2-parallax-5.jpg);
+    background-position: 20%;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+ul li{
+    list-style: none;
+}
