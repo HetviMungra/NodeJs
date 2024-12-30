@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+</head>
+<body>
+
+
+
+    <div class="navbar">
+        <h1> &nbsp;  &nbsp; Bookstore</h1>
+        <div>
+            <a href="/">Home</a>&nbsp;  &nbsp; &nbsp;  &nbsp; 
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Add Book </button>&nbsp;  &nbsp; &nbsp;  &nbsp; 
+        
+            </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Add your new   </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+              
+            <form action="/addData"  enctype="multipart/form-data" method="post">
+                 <input type="file" name="image" required><br>
+
+                <input type="text" name="book" placeholder="Enter Book Name" required><br>
+                <input type="text" name="author" placeholder="Enter Author" required><br>
+                <input type="number" name="price" placeholder="Enter Price" required><br><br>
+                <input type="date" name="date" required><br>
+                <button type="submit">Add Book</button>
+            </form>
+           
+
+        
+    </div>
+
+    <div class="book-container">
+        <% data.map ((e,i)=>{%>  
+            <div class="Book-card">
+                <center><img src="<%=e.image%>" alt="Book Image"></center>
+                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding: 3px; color: black;
+                text-transform: capitalize; font-size: 35px;"><%=e.book%></h1>
+                <h5 style="text-align: end; margin-top: -10px; font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif; padding-right: 20px;
+                font-weight: 600; color: rgb(71, 72, 72); font-style: italic;">by <%=e.author %></h5>
+                <h2 style=" font-family: Arial, Helvetica, sans-serif; padding-left: 20px;
+                font-size: 23px; color: red;font-weight: 600;" >$ <%=e.price %></h2>
+                <h3 style=" font-family: Arial, Helvetica, sans-serif; padding-left: 20px;
+                font-size: 18px; font-weight: 600; color: #2011ef;">Public : <%=e.date %></h3>
+                <span>
+                    <button>
+                        <a href="/editData?id=<%=e.id%>"> Edit </a>
+                    </button>
+                    <button>
+                        <a href="/deleteData?id=<%=e.id%>"> Delete </a>
+                    </button>
+                </span>
+            </div>
+        <% }) %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
