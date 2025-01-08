@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 1006;
+const port = 1005;
 const app = express ();
 const db = require("./Config/db")
 const schema = require ("./model/firstSchema")
@@ -27,14 +27,14 @@ const Storage = multer.diskStorage({
 const upload = multer({ storage : Storage}).single("image");
 
 app.get ("/", async (req,res) =>{ 
-     data = await schema.find({});
+    let data = await schema.find({});
      res.render("index", {data});
  });
 
-//  app.get ("/about",async (req,res) => {
-//      data = await schema.find({});
-//     res.render("about", {data});
-//  })
+ app.get ("/about",async (req,res) => {
+    let data = await schema.findById(req.query.id);
+    res.render("about", {data});    
+ })
 
  app.post("/addData",upload,async (req ,res) => {
    // console.log(req.file)

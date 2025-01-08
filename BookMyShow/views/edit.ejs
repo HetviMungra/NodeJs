@@ -9,29 +9,33 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-
-    <h1>Edit Movie</h1>  
+    <br>
+    <center>
+    <div class="edit-head" style="display: flex; padding: 0; justify-content: space-between; width: 80%;">
+        <h1>Edit Movie</h1>  
     
-    <a href="/">Cencle</a>
+   <button style="height: 50px; background-color: red;border-radius: 10px;  margin-left: 4%;
+   border: none; width: 100px;"> <a style="color: white; font-weight: 800px;" href="/">Cencle</a></button>
+    </div>
     <br><br>
     <form action="/updateData"   enctype="multipart/form-data" method="post">
         <input type="text" hidden value="<%=data.id%>" name="id">
-        <input type="file" name="image" required><br>
+        <input class="input_fail" type="file" name="image" required><br>
        <img src="<%=data.image%>"  alt=""  width="55px"><br>   
        <input type="text" name="name" placeholder="Enter Movie name" value="<%=data.name %>" required><br>
        <input type="text" name="type" placeholder="Enter Movie type" value="<%=data.type %>" required><br>
-       <!-- <input type="file" name="poster" required><br> -->
-       <!-- <img src=""  alt=""  width="55px"><br>  -->
-       <!-- <input type="number" name="rate" placeholder="Enter rate" value="<>" required><br>
-       <input type="number" name="votes" placeholder="Enter How many people vote" value="<>" required><br>
-       <input type="text" name="language" placeholder="Enter Language" value="<>" required><br>
-       <input type="time" name="time" placeholder="Enter Time" value="<" required><br>
-       <input type="text" name="category" placeholder="eg.UA,U,A "  value="" required><br>
-       <input type="date" name="date" required value=""> -->
+      <!-- <input type="file" name="poster" required><br> 
+        <img src=""  alt=""  width="55px"><br>  -->
+        <input type="number" name="rate" placeholder="Enter rate" value="<%=data.rate%>" required><br>
+       <input type="number" name="votes" placeholder="Enter How many people vote" value="<%=data.votes%>" required><br>
+       <input type="text" name="language" placeholder="Enter Language" value="<%=data.language%>" required><br>
+       <input type="time" name="time" placeholder="Enter Time" value="<%=data.time%>" required><br>
+       <input type="text" name="category" placeholder="eg.UA,U,A "  value="<%=data.category%>" required><br>
+       <input type="date" name="date" required value="<%=data.date%>"> 
        
        <button type="submit">Update Movie</button>
    </form>
-
+</center>
 
 </body>
 </html>

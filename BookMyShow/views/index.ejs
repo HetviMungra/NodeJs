@@ -49,13 +49,13 @@
                             <input type="file" name="image" required><br>
                             <input type="text" name="name" placeholder="Enter Movie name" required><br>
                             <input type="text" name="type" placeholder="Enter Movie type" required><br>
-                            <!-- <input type="file" name="poster" required><br> -->
-                            <!-- <input type="number" name="rate" placeholder="Enter rate" required><br>
+                             <input type="file" name="poster" required><br> 
+                            <input type="number" name="rate" placeholder="Enter rate" required><br>
                             <input type="number" name="votes" placeholder="Enter How many people vote" required><br>
                             <input type="text" name="language" placeholder="Enter Language" required><br>
                             <input type="time" name="time" placeholder="Enter Time" required><br>
                             <input type="text" name="category" placeholder="eg.UA,U,A " required><br>
-                            <input type="date" name="date" required> -->
+                            <input type="date" name="date" required> 
                             
                             <button type="submit">Add Movie</button>
                         </form>
@@ -120,10 +120,11 @@
         <div class="text-m">
             <h3>Recommended Movies</h3>
         </div>
-        <!-- <a href="/about"> -->
-        <div class="movie-card" style="display: flex ; justify-content: space-evenly; ">
-         <%  data.map ((e,i)=>{ %>
-          <!-- <a href="/about" style="text-decoration: none; "> -->
+       
+        <div class="movie-card" style="display: flex ; justify-content: space-evenly;  ">
+         <%data.map ((e,i)=>{ %>
+          <a href="/about?id=<%=e.id%>" style="text-decoration: none; "> 
+
             <div class="card"  style="border: transparent;" >
               <div class="movie-pic">
                 <img src="<%=e.image%>" class="card-img-top "  alt="Movie img">
@@ -132,7 +133,6 @@
                 <div class="card-body">
                   <h2 class="card-text"><%=e.name %></h2>
                   <p><%=e.type %></p>
-
 
                   <span >
                     <button style="background-color: rgb(42, 175, 28);">
@@ -149,7 +149,7 @@
               <% }) %>
         </div>
         
-      </main>
+      </main> 
     </center>
 </body>
 </html>
