@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeoDash Free Bootstrap Admin Template by Adminmart</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/seodashlogo.png" />
+  <link rel="stylesheet" href="../../node_modules/simplebar/dist/simplebar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+   <%-include("aside")%>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+     
+    <div class="body-wrapper">
+      <!--  Header Start -->
+     <%- include ("header") %>
+      <!--  Header End -->
+      <br><br><br>
+      <form class="form-horizontal" action="<%= isEdit ? `updateAdminData` : `addData` %>" method="post"  style="max-width: 650px; margin: 25px auto;padding: 10px 20px; font-family: Arial, sans-serif; background-color: #ffffff; border: 1px solid #ffffff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <input type="hidden" name="id" value="<%= data ? data._id : '' %>">
+        <div class="card-body" style="padding: 20px;">
+            <h4 class="card-title" style="text-align: center; margin-bottom: 20px; color: #000000;">Personal Info</h4>
+            <!-- First Name -->
+            <div class="form-group row" style="margin-bottom: 15px;">
+                <label for="fname" class="col-sm-3 text-right control-label col-form-label" style="font-weight: bold;">First Name</label>
+                <div class="col-sm-9">
+                    <input type="text" value="<%= data ? data.fname : '' %>" name="fname" class="form-control" id="fname" placeholder="First Name Here" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </div>
+            <!-- Last Name -->
+            <div class="form-group row" style="margin-bottom: 15px;">
+                <label for="lname" class="col-sm-3 text-right control-label col-form-label" style="font-weight: bold;">Last Name</label>
+                <div class="col-sm-9">
+                    <input type="text" value="<%= data ? data.lname : '' %>" name="lname" class="form-control" id="lname" placeholder="Last Name Here" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group row" style="margin-bottom: 15px;">
+                <label for="email" class="col-sm-3 text-right control-label col-form-label" style="font-weight: bold;">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" value="<%= data ? data.email : '' %>" name="email" class="form-control" id="email" placeholder="Email" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="form-group row" style="margin-bottom: 15px;">
+                <label for="password" class="col-sm-3 text-right control-label col-form-label" style="font-weight: bold;">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" value="<%= data ? data.password : '' %>" name="password" class="form-control" id="password" placeholder="Password Here" autocomplete="new-password" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </div>
+             <!-- phone -->
+             <div class="form-group row" style="margin-bottom: 15px;">
+              <label for="cono1" class="col-sm-3 text-right control-label col-form-label" style="font-weight: bold;">Contact No</label>
+              <div class="col-sm-9">
+                  <input type="text" value="<%= data ? data.phone : '' %>" class="form-control" id="cono1" name="phone" placeholder="Contact No Here">
+              </div>
+          </div>
+          <!-- Message -->
+          <div class="form-group row" style="margin-bottom: 15px;">
+            <label for="cono1" class="col-sm-3 text-right control-label col-form-label" style="font-weight: bold;">Message</label>
+            <div class="col-sm-9">
+                <textarea class="form-control" name="Message"><%= data ? data.Message : '' %></textarea>
+            </div>
+        </div>
+        </div>
+        <div class="border-top" style="border-top: 1px solid #ddd; padding: 15px;">
+            <div class="card-body" style="text-align: center;">
+                <button type="submit" class="btn btn-primary" style="background-color: #0649c9; border: none; padding: 10px 40px; border-radius: 20px; color: #fff; cursor: pointer;">Submit</button>
+            </div>
+        </div>
+    </form>
+    
+
+
+    </div>
+  </div>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>

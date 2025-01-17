@@ -1,0 +1,102 @@
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeoDash Free Bootstrap Admin Template by Adminmart</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/seodashlogo.png" />
+  <link rel="stylesheet" href="../../node_modules/simplebar/dist/simplebar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <%-include("aside")%>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <%- include ("header") %>
+      <!--  Header End -->
+      <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">User Table</h5>
+                </div>
+                <table class="table">
+                      <thead>
+                        <!-- step - 1  -->
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Password</th>
+                          <th scope="col">Phone</th>
+                          <th scope="col">Message </th>
+                          <th scope="col" colspan="2">Action</th>
+                          
+
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        <!-- step - 2  -->
+
+                <% data.map((e,i)=>{ %>
+                        <tr>
+                          <th><%= i+1 %></th>
+                          <td><%= e.fname %></td>
+                          <td><%= e.lname %></td>
+                          <td><%= e.email %></td>
+                          <td><%= e.password %></td>
+                          <td><%= e.phone %></td>
+                          <td><%= e.Message %></td>
+                          
+                         
+                         <td> <button style="border: none; background-color: transparent;">
+                            <a href="/editAdminData?id=<%=e.id%>"> <i class="fas fa-edit" style="color: #74C0FC; font-size: 20px;"></i> </a>
+                            </button>
+                         </td>
+                        <td>
+                            <button style="border: none; background-color: transparent;">
+                                <a href="/deleteAdminData?id=<%=e.id%>"> <i class="fa-solid fa-trash" style="color: #d03535;font-size: 20px;"></i> </a>
+                            </button>
+                        </td>
+                        </tr>
+                        
+                      
+
+                <% }) %>
+                        
+                      </tbody>
+
+                </table>
+            </div>
+           
+           
+            
+        </div>
+    </div>
+    </div>
+  </div>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
