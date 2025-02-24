@@ -1,4 +1,4 @@
-const Article = require('../models/models');
+const Article = require('../model/Articlescham');
 
 exports.getAllArticles = async (req, res) => {
   const articles = await Article.find().populate('author');
@@ -9,6 +9,7 @@ exports.getMyArticles = async (req, res) => {
   const articles = await Article.find({ author: req.user.id }).populate('author');
   res.render('myArticles', { articles });
 };
+
 
 exports.renderArticleForm = (req, res) => {
   res.render('articleForm', { formTitle: 'Create Article', formAction: '/articles/new', buttonText: 'Create' });
@@ -29,10 +30,10 @@ exports.renderEditForm = async (req, res) => {
 exports.updateArticle = async (req, res) => {
   const { title, content } = req.body;
   await Article.findByIdAndUpdate(req.params.id, { title, content });
-  res.redirect('/my-articles');
+  res.redirect('/myarticles');
 };
 
 exports.deleteArticle = async (req, res) => {
   await Article.findByIdAndDelete(req.params.id);
-  res.redirect('/my-articles');
+  res.redirect('/myarticles');
 };

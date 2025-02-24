@@ -1,6 +1,8 @@
-const User = require('../models/models');
+const User = require('../model/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+
+
 
 exports.register = async (req, res) => {
   const { username, password } = req.body;
@@ -19,7 +21,7 @@ exports.login = async (req, res) => {
   try {
     const user = await User.findOne({ username });
     if (user && await bcrypt.compare(password, user.password)) {
-      const token = jwt.sign({ id: user._id, role: user.role }, 'secret_key');
+      const token = jwt.sign({ id: user._id, role: user.role }, 'rnw');
       res.cookie('token', token, { httpOnly: true });
       res.redirect('/');
     } else {
