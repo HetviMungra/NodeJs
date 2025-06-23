@@ -125,6 +125,8 @@ a {
   background: #fff668;
   border: 1px solid black;
   /* border-radius: 50%; */
+  z-index: 1;
+  margin-right: -25px;
   width: 60px;
   height: 60px;
   font-weight: 700;
@@ -136,11 +138,12 @@ a {
   box-shadow: inset 5px 5px 10px #d2d248, inset -5px -5px 10px #ffff9d;
   user-select: none;
 }
-.circle-blue {
+.blue-ci {
   background: #0d60ff;
   /* border: 1px solid black; */
   border: 1px solid black;
   border-radius: 50%;
+ 
   width: 60px;
   height: 60px;
   font-weight: 700;
@@ -343,6 +346,10 @@ a {
   stroke-width: 2.5;
 }
 
+.presenting-pages{
+  margin: 0;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .navbar {
@@ -397,6 +404,9 @@ a {
   .brush-right {
     display: none;
   }
+  .presenting-pages{
+    margin-top: -200px;
+  }
  
 }
 @media (max-width: 1024px) {
@@ -414,5 +424,9 @@ a {
   .brush-left,
   .brush-right {
     display: none;
+  }
+  .presenting-pages{
+    margin-top: -100px;
+    /* background-color: #4b81ff; */
   }
 }

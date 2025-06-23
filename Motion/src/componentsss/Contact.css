@@ -95,10 +95,12 @@
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  /* font-weight: 700;   */
-  font-size: 3rem;
+  z-index: 2;
+  margin-right: -20px;
+  font-weight: 700;  
+  font-size: 2.75rem;
   display: flex;
-  padding: 0.5rem;
+  padding: 0.65rem;
   justify-content: center;
   align-items: center;
   color: #000;
@@ -107,13 +109,13 @@
 }
 .blue-i{
   background: #0d60ff;
-  /* border: 1px solid black; */
   border: 1px solid black;
   border-radius: 50%;
+  /* z-index: 0; */
    padding: 0.10rem;
   width: 70px;
   height: 70px;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-size: 3.3rem;
   display: flex;
   justify-content: center;

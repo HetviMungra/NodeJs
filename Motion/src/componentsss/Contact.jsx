@@ -24,6 +24,7 @@ export default function Contact() {
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 75%",
+          
           toggleActions: "play reverse play reverse",
         },
       });
@@ -53,42 +54,36 @@ export default function Contact() {
           toggleActions: "play reverse play reverse",
         },
       });
-// Yellow Circle Animate Left to Right Twice
-gsap.fromTo(
-  ".to",
-  { x: 0 },
-  {
-    x: 50,
-    repeat: 1,
-    yoyo: true,
-    duration: 0.8,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      trigger: ".to",
-      start: "top 80%",
-      toggleActions: "play reverse play reverse",
-    },
-  }
-);
 
-// Blue Icon Animate Left to Right Twice with slight delay for alternate effect
-gsap.fromTo(
-  ".blue-i",
-  { x: 0 },
-  {
-    x: 50,
-    repeat: 1,
-    yoyo: true,
-    duration: 0.8,
-    ease: "power1.inOut",
-    delay: 0.9,  // Delayed to start after Yellow Circle finishes first half cycle
-    scrollTrigger: {
-      trigger: ".blue-i",
-      start: "top 80%",
-      toggleActions: "play reverse play reverse",
-    },
-  }
-);
+
+
+gsap.to(".to", {
+      x: 60,
+      y: 0,
+      duration: 1.5,
+      repeat: 1,
+      yoyo: true,
+      ease: "power1.inOut",
+      scrollTrigger: {
+          trigger: ".to",
+          start: "top 70%",
+          toggleActions: "play reverse play reverse",
+        },
+    });
+
+    gsap.to(".blue-i", {
+      x: -60,
+      y: 0,
+      duration: 1.5,
+      repeat: 1,
+      yoyo: true,
+      ease: "power1.inOut",
+      scrollTrigger: {
+          trigger: ".blue-i",
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+    });
 
 
       // Button Hover Effect (independent of scroll)

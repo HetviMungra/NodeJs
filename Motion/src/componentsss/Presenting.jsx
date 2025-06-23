@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +98,9 @@ export default function Presenting() {
   }, []);
 
   return (
-    <div className="main-container">
+
+   <div className="presenting-pages">
+     <div className="main-container">
       <div
         ref={containerRef}
         className="container-fluid py-5 mt-5"
@@ -244,5 +247,6 @@ export default function Presenting() {
         </div>
       </div>
     </div>
+   </div>
   )
 }

@@ -35,6 +35,7 @@ useEffect(() => {
     });
 
   }, cardsRef);
+  
 
   return () => ctx.revert();
 }, []);
@@ -53,7 +54,7 @@ useEffect(() => {
   ];
 
   return (
-    <Container fluid className="seminar-container p-0">
+    <Container fluid className="seminar-container ">
       <Row className="g-0">
         <Col xs={12} className="yellow-bg">
           <Container className="py-5">

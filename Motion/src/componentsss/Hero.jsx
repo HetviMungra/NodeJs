@@ -6,6 +6,7 @@ import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
 export default function Hero() {
   const mainRef = useRef(null);
 
+  
   useEffect(() => {
     // GSAP intro animation example
     const ctx = gsap.context(() => {
@@ -15,11 +16,44 @@ export default function Hero() {
         duration: 1,
         stagger: 0.15,
         ease: "power3.out",
-       
+
 
       });
+       gsap.to(".circle-yellow", {
+      x: 60,
+      y: 0,
+      duration: 1.5,
+      repeat: 1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    gsap.to(".blue-ci", {
+      x: -60,
+      y: 0,
+      duration: 1.5,
+      repeat: 1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
     }, mainRef);
-    
+    gsap.to(".brush-left", {
+      x: 40,
+      duration: 1.8,
+      repeat: 1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+
+    gsap.to(".brush-right", {
+      x: -40,
+      duration: 1.8,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+
+
 
     return () => ctx.revert();
   }, []);
@@ -69,7 +103,7 @@ export default function Hero() {
           <span className="circle-yellow" aria-hidden="true">&amp;</span>
 
           {/* Blue circle backpack icon */}
-          <span className="circle-blue" aria-hidden="true" >
+          <span className="blue-ci" aria-hidden="true" >
            <i class="fa-solid fa-briefcase" style={{fontSize:"30px"}} ></i>
           </span>
 
