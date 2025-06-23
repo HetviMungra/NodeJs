@@ -1,0 +1,345 @@
+/* Reset and basics */
+body,
+html,
+#root {
+  background: #f7f7f7
+  
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><circle cx="1" cy="1" r="1" fill="%23d0d0d0" /></svg>')
+    repeat;
+}
+.footer-section {
+  /* background: #f5f5f5; */
+  font-family: "Poppins", sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+/* ==== REGISTER BANNER ==== */
+.register-section {
+  background: #f5f5f5;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+}
+
+.register-heading {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 5vw, 3.3rem);
+  line-height: 1.2;
+  color: black;
+  user-select: text;
+}
+
+.register-heading span {
+  user-select: text;
+}
+
+/* Image circle in heading with clip path elliptical shape */
+.register-heading .img-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 25% / 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.register-heading .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Highlight styles for certain words */
+
+.highlight-yellow {
+  background-color: #fff974;
+  border-radius: 19px;
+  padding: 0.25rem 0.9rem;
+  font-weight: 700;
+  user-select: text;
+}
+
+.circle-blue {
+  background-color: #3754db;
+  color: white !important;
+  border-radius: 19px;
+  padding: 0.25rem 0.9rem;
+  user-select: text;
+}
+
+.highlight-white {
+  border: 2.3px solid black;
+  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+  font-weight: 500;
+}
+
+/* Register description text */
+.register-desc {
+  font-size: 0.9rem;
+  color: #333333cc;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  user-select: text;
+}
+
+/* Register button */
+.register-btn {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  border: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.register-btn:hover,
+.register-btn:focus {
+  background-color: #222;
+  color: #fff;
+  outline: none;
+}
+
+/* ==== FOOTER ==== */
+
+.footer {
+  background-color: #000;
+  color: white;
+  border-radius: 2.5rem;
+  position: relative;
+  overflow: visible;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 40px rgb(0 0 0 / 0.3);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Subscribe Text */
+.subscribe-section .subscribe-headers {
+  user-select: none;
+}
+
+.subscribeword {
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  user-select: none;
+}
+
+.subscribe-green {
+  background-color: #338a39;
+}
+
+.subscribe-black {
+  background-color: transparent;
+}
+
+.subscribe-black:hover {
+  background-color: #222;
+}
+
+.subscribe-headers > div {
+  display: inline-block;
+}
+
+/* Subscribe Form */
+.subscribe-form {
+  max-width: 360px;
+  user-select: none;
+}
+
+.email-input {
+  border: 1px solid #222;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  user-select: text;
+  transition: border-color 0.3s ease;
+}
+
+.email-input::placeholder {
+  color: #ccc;
+}
+
+.email-input:focus {
+  border-color: #338a39;
+  outline: none;
+  background-color: #222;
+}
+
+.btn-send {
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  min-width: 70px;
+  transition: background-color 0.3s ease;
+  background: white;
+  color: black;
+  border: 1px solid #222;
+}
+
+.btn-send:hover,
+.btn-send:focus {
+  background-color: #338a39;
+  color: white;
+  border-color: #2b6f2c;
+  outline: none;
+}
+
+/* Footer Links Section */
+
+.footer-links {
+  padding-left: 0;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover,
+.footer-links li a:focus {
+  color: #338a39;
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+  user-select: none;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  background-color: #338a39;
+  outline: none;
+}
+
+/* Privacy Policy */
+.privacy-policy {
+  font-size: 0.8rem;
+}
+
+/* Decorative images block */
+
+.decorative-images {
+  position: absolute;
+  top: -35px;
+  right: 15px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.circle-yellow {
+  width: 70px;
+  height: 70px;
+  background-color: #fff974;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.small-img-top,
+.small-img-bottom {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid black;
+  box-shadow: 0 0 15px 1px rgb(0 0 0 / 0.3);
+  background: white;
+}
+
+.small-img-top img,
+.small-img-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 767.98px) {
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .subscribe-section {
+    margin-bottom: 2rem;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.6rem;
+  }
+
+  .decorative-images {
+    top: -60px;
+    right: 10px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .circle-yellow,
+  .small-img-top,
+  .small-img-bottom {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-heading {
+    font-size: 1.6rem;
+  }
+
+  .register-heading .img-wrap {
+    width: 50px;
+    height: 50px;
+  }
+}
