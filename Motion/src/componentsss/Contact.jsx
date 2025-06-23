@@ -56,34 +56,33 @@ export default function Contact() {
       });
 
 
-
+// Yellow Circle ("to")
 gsap.to(".to", {
-      x: 60,
-      y: 0,
-      duration: 1.5,
-      repeat: 1,
-      yoyo: true,
-      ease: "power1.inOut",
-      scrollTrigger: {
-          trigger: ".to",
-          start: "top 70%",
-          toggleActions: "play reverse play reverse",
-        },
-    });
+  x: 40, // Only move horizontally
+  duration: 1.5,
+  repeat: 1,
+  yoyo: true,
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".to",
+    start: "top 80%",
+    toggleActions: "play reverse play reverse",
+  },
+});
 
-    gsap.to(".blue-i", {
-      x: -60,
-      y: 0,
-      duration: 1.5,
-      repeat: 1,
-      yoyo: true,
-      ease: "power1.inOut",
-      scrollTrigger: {
-          trigger: ".blue-i",
-          start: "top 80%",
-          toggleActions: "play reverse play reverse",
-        },
-    });
+// Blue Circle ("blue-i")
+gsap.to(".blue-i", {
+  x: -40,
+  duration: 1.5,
+  repeat: 1,
+  yoyo: true,
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".blue-i",
+    start: "top 80%",
+    toggleActions: "play reverse play reverse",
+  },
+});
 
 
       // Button Hover Effect (independent of scroll)
@@ -108,6 +107,7 @@ gsap.to(".to", {
               <Col xs={12} md={10} lg={8} className="text-center">
                 
                 {/* Heading */}
+                <div className="contact-inline-line">
                 <h1 className="contact-heading mb-4" ref={headingRef}>
                   <span>We're</span>
                   <span className="rounded-image-rect" aria-hidden="true">
@@ -120,14 +120,15 @@ gsap.to(".to", {
                   <span>waiting</span>
                   <br className="d-md-none" />
                   <span className="for">for</span>
-                  <span>you </span>
+                  <span  className="word">you </span>
                   <span className="to" aria-hidden="true"> to</span>
                   <span className="blue-i" aria-hidden="true">
                     <i className="fa-solid fa-briefcase" style={{ fontSize: "30px" }}></i>
                   </span>
-                  <span>contact</span>
+                  <span  className="word">contact</span>
                   <span className="us" aria-hidden="true">us</span>
                 </h1>
+                </div>
 
                 {/* Description */}
                 <p className="contact-description mb-4 mb-md-5" ref={descriptionRef}>
