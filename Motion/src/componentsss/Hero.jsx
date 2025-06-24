@@ -20,7 +20,7 @@ export default function Hero() {
 
       });
        gsap.to(".circle-yellow", {
-      x: 60,
+      x: 45,
       y: 0,
       duration: 1.5,
       repeat: 1,
@@ -29,7 +29,7 @@ export default function Hero() {
     });
 
     gsap.to(".blue-ci", {
-      x: -60,
+      x: -45,
       y: 0,
       duration: 1.5,
       repeat: 1,
@@ -104,7 +104,7 @@ export default function Hero() {
 
           {/* Blue circle backpack icon */}
           <span className="blue-ci" aria-hidden="true" >
-           <i class="fa-solid fa-briefcase" style={{fontSize:"30px"}} ></i>
+           <i class="fa-solid fa-briefcase"  ></i>
           </span>
 
           <span>trainers</span>

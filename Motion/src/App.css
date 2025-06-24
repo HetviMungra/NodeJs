@@ -144,10 +144,10 @@ a {
   border: 1px solid black;
   border-radius: 50%;
  
-  width: 60px;
-  height: 60px;
-  font-weight: 700;
-  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  /* font-weight: 700; */
+  font-size: 2.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,10 +369,18 @@ a {
     width: 52px;
     height: 52px;
   }
-  .circle-yellow,
-  .circle-blue {
-    width: 45px;
-    height: 45px;
+  .circle-yellow {
+    width: 55px;
+    height: 55px;
+    font-size: 1.75rem;
+  }
+  .blue-ci {
+    width: 50px;
+    height: 50px;
+    /* font-size: 0.5rem; */
+  }
+  .blue-ci i{
+    font-size: 1.65rem;
   }
   .email-form {
     flex-direction: column;
@@ -428,5 +436,18 @@ a {
   .presenting-pages{
     margin-top: -100px;
     /* background-color: #4b81ff; */
+  }
+  .circle-yellow {
+    width: 80px;
+    height: 80px;
+    /* border: #2967fc; */
+    font-size: 1.75rem;
+  }
+  .blue-ci {
+    width: 50px;
+    height: 50px;
+  }
+  .blue-ci i{
+    font-size: 1.55rem;
   }
 }

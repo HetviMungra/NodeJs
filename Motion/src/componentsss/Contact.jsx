@@ -58,7 +58,7 @@ export default function Contact() {
 
 // Yellow Circle ("to")
 gsap.to(".to", {
-  x: 40, // Only move horizontally
+  x: 45, // Only move horizontally
   duration: 1.5,
   repeat: 1,
   yoyo: true,
@@ -72,7 +72,7 @@ gsap.to(".to", {
 
 // Blue Circle ("blue-i")
 gsap.to(".blue-i", {
-  x: -40,
+  x: -45,
   duration: 1.5,
   repeat: 1,
   yoyo: true,

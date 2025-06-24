@@ -14,101 +14,13 @@ html,
   overflow-x: hidden;
 }
 
-/* ==== REGISTER BANNER ==== */
-.register-section {
-  background: #f5f5f5;
-  position: relative;
-  z-index: 1;
-  user-select: none;
-}
 
-.register-heading {
-  font-weight: 800;
-  font-size: clamp(1.8rem, 5vw, 3.3rem);
-  line-height: 1.2;
-  color: black;
-  user-select: text;
-}
-
-.register-heading span {
-  user-select: text;
-}
-
-/* Image circle in heading with clip path elliptical shape */
-.register-heading .img-wrap {
-  width: 70px;
-  height: 70px;
-  border-radius: 25% / 50%;
-  overflow: hidden;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.register-heading .img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Highlight styles for certain words */
-
-.highlight-yellow {
-  background-color: #fff974;
-  border-radius: 19px;
-  padding: 0.25rem 0.9rem;
-  font-weight: 700;
-  user-select: text;
-}
-
-.circle-blue {
-  background-color: #3754db;
-  color: white !important;
-  border-radius: 19px;
-  padding: 0.25rem 0.9rem;
-  user-select: text;
-}
-
-.highlight-white {
-  border: 2.3px solid black;
-  border-radius: 20px;
-  padding: 0.35rem 0.8rem;
-  font-weight: 500;
-}
-
-/* Register description text */
-.register-desc {
-  font-size: 0.9rem;
-  color: #333333cc;
-  margin-top: 0.5rem;
-  line-height: 1.4;
-  user-select: text;
-}
-
-/* Register button */
-.register-btn {
-  background-color: black;
-  color: white;
-  font-weight: 600;
-  border-radius: 15px;
-  border: none;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-.register-btn:hover,
-.register-btn:focus {
-  background-color: #222;
-  color: #fff;
-  outline: none;
-}
 
 /* ==== FOOTER ==== */
 
 .footer {
   background-color: #000;
-  color: white;
+  /* color: white;   */
   border-radius: 2.5rem;
   position: relative;
   overflow: visible;
@@ -278,9 +190,21 @@ html,
   background-color: #fff974;
   border-radius: 50%;
   flex-shrink: 0;
+    z-index: 2;
+
 }
 
-.small-img-top,
+.small-img-top{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid black;
+  box-shadow: 0 0 15px 1px rgb(0 0 0 / 0.3);
+  background: white;
+  z-index: 1;
+  margin-left: -100px;
+}
 .small-img-bottom {
   width: 80px;
   height: 80px;
@@ -289,6 +213,7 @@ html,
   border: 3px solid black;
   box-shadow: 0 0 15px 1px rgb(0 0 0 / 0.3);
   background: white;
+  /* z-index: 1; */
 }
 
 .small-img-top img,
@@ -301,7 +226,7 @@ html,
 }
 
 /* --- Responsive adjustments --- */
-@media (max-width: 767.98px) {
+@media (max-width: 1024px) {
   .footer-inner {
     flex-direction: column;
   }
@@ -333,13 +258,33 @@ html,
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .register-heading {
     font-size: 1.6rem;
+    background-color: #2b6f2c;
   }
 
   .register-heading .img-wrap {
     width: 50px;
     height: 50px;
+    border-radius: 10%;
+    /* background-color: #338a39; */
+  }
+  .decorative-images{
+     /* background-color: #338a39; */
+    top: -25px;
+    right: 8px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .small-img-top{
+   
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid black;
+    box-shadow: 0 0 10px 1px rgb(0 0 0 / 0.3);
+    background: white;
+    z-index: 1;
+    margin-left: -60px;
   }
 }
